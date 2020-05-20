@@ -11,7 +11,7 @@ export default class BookComponent extends React.Component {
                 <p className="Title">{this.props.book.name}</p>
                 <p className="Rating">{this.props.book.rating} stars</p>
                 <p>${this.props.book.price}.00</p>
-                <button onClick={(e) => this.props.onClick(book)}>Add To Cart</button>
+                <button onClick={(_) => this.props.onClick(book)}>Add To Cart</button>
             </div>
         );
     }
