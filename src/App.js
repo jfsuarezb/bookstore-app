@@ -7,6 +7,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      cart:[],
       books:[
         {
           id:1,
@@ -150,10 +151,18 @@ class App extends React.Component {
         }
       ]
     }
-    console.log("books have been added");
+    this.addBook = this.addBook.bind(this);
   }
+
+  addBook(book) {
+    this.setState({
+      cart:this.state.cart.concat(book),
+      books:this.state.books
+    });
+  }
+
   render() {
-    let booksRendered = this.state.books.map((bookDisplayed) => <BookComponent book={bookDisplayed}/>);
+    let booksRendered = this.state.books.map((bookDisplayed) => <BookComponent key={bookDisplayed.id.toString()} book={bookDisplayed} onClick={this.addBook}/>);
     return (
       <div>
         <HeaderComponent />

@@ -7,7 +7,7 @@
     min-width:150px;
     float:left;
     box-sizing: border-box;
-    min-height:370px;
+    height:400px;
 }
 
 .BookComponentStyle p {
@@ -19,5 +19,28 @@
 .BookComponentStyle img {
     width: 7%;
     min-width:130px;
+    height:200px;
     text-align:center;
+}
+
+.BookComponentStyle .Title {
+    font-weight:bold;
+    padding-bottom:0px;
+    margin-bottom:0px;
+}
+
+.BookComponentStyle .Rating {
+    color:rgba(255, 123, 0, 0.815);
+}
+
+.BookComponentStyle button {
+    width:7%;
+    min-width:130px;
+    border:1px solid black;
+    border-radius:3px;
+    font-weight:bold;
+    background-color:#ccc;
+    color:black;
+    margin-bottom:2px;
+    padding:5px;
 }
