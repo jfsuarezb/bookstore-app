@@ -1,0 +1,22 @@
+.BookComponentStyle {
+    margin:10px 20px;
+    border:1px solid #333;
+    border-radius: 10px;
+    padding:14px 10px;
+    width:7%;
+    min-width:150px;
+    float:left;
+    box-sizing: border-box;
+}
+
+.BookComponentStyle p {
+    line-height:1.2em;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.BookComponentStyle img {
+    width: 7%;
+    min-width:130px;
+    text-align:center;
+}
