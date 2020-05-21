@@ -1,0 +1,17 @@
+.TotalComponentStyle {
+    position:relative;
+    top:10px;
+    text-align:left;
+}
+
+.TotalComponentStyle button {
+    width:85%;
+    margin-left:20px;
+    margin-top:15px;
+    padding:10px;
+    text-align:center;
+    background-color:rgb(2, 207, 2);
+    color:white;
+    border:none;
+    border-radius:10px;
+}

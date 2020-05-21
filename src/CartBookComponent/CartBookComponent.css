@@ -1,0 +1,17 @@
+.CartBookComponentStyle {
+    display:block;
+    margin-top:10px;
+    overflow:scroll;
+}
+
+.CartBookComponentStyle button {
+    background-color:red;
+    color:white;
+    border:0px solid black;
+    border-radius:8px;
+    margin-right:0px;
+}
+.CartBooksubCompStyle {
+    display:inline;
+    padding:10px 13px;
+}

@@ -1,0 +1,12 @@
+.CartComponentStyle {
+    float:left;
+    width:30%;
+    box-sizing:border-box;
+}
+
+.CartComponentStyle h1 {
+    font-weight:bold;
+    color:black;
+    width:180px;
+    margin:auto;
+}

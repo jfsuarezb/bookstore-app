@@ -1,6 +1,8 @@
 import React from 'react';
 import BookComponent from './BookComponent/BookComponent.js'
 import HeaderComponent from './HeaderComponent/HeaderComponent.js'
+import CartComponent from './CartComponent/CartComponent.js'
+import './BooksContainer.css'
 
 class App extends React.Component {
   
@@ -154,10 +156,38 @@ class App extends React.Component {
   }
 
   addBook = (book) => {
+    let newID = book.id + Math.floor((Math.random()*100)+50);
+    let newBook = {
+      id:newID,
+      name:book.name,
+      rating:book.rating,
+      price:book.price,
+      image:book.image
+    }
     this.setState({
-      cart:this.state.cart.concat(book),
+      cart:this.state.cart.concat(newBook),
       books:this.state.books
     });
+  }
+
+  removeFromCart = (bookToRemove) => {
+    let newCart = this.state.cart.filter((book) => (book.id !== bookToRemove.id));
+    this.setState({
+      cart:newCart,
+      books:this.state.books
+    });
+  }
+
+  buy = () => {
+    if (this.state.cart.length === 0) {
+      alert("No books have been selected");
+    } else {
+      this.setState({
+        cart:[],
+        books:this.state.books
+      });
+      alert("Books will be delivered promptly");
+    }
   }
 
   render() {
@@ -165,7 +195,12 @@ class App extends React.Component {
     return (
       <div>
         <HeaderComponent />
-        {booksRendered}
+        <div className="PageContainer">
+        <div className="BooksContainer">
+          {booksRendered}
+        </div>
+        <CartComponent booksAddedToCart={this.state.cart} removeFromCart={this.removeFromCart} buy={this.buy}/>
+        </div>
       </div>
     );
   }

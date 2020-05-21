@@ -1,0 +1,12 @@
+.BooksContainer {
+    float:left;
+    padding:5px;
+    width:70%;
+    border-right:2px solid #ccc;
+    box-sizing:border-box;
+}
+.PageContainer {
+    margin:0px;
+    overflow:scroll;
+    min-width:900px;
+}
