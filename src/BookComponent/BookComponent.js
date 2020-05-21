@@ -8,7 +8,6 @@ export default class BookComponent extends React.Component {
     }
 
     render() {
-        let book = this.props.book;
         return (
             <div className="BookComponentStyle">
                 <img src={this.props.book.image} alt="" />
