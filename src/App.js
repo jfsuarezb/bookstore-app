@@ -151,10 +151,9 @@ class App extends React.Component {
         }
       ]
     }
-    this.addBook = this.addBook.bind(this);
   }
 
-  addBook(book) {
+  addBook = (book) => {
     this.setState({
       cart:this.state.cart.concat(book),
       books:this.state.books
